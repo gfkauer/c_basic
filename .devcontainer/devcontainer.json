@@ -3,11 +3,28 @@
     "dockerFile": "Dockerfile",
 	"runArgs": ["--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined"],
     "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.profiles.windows": {
+            "PowerShell": {
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
+          },
+            "Command Prompt": {
+              "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+              ],
+              "icon": "terminal-cmd"
+            },
+            "Git Bash": {
+              "path": ["C:\\Program Files\\Git\\bin\\bash.exe"],
+              "source": "Git Bash",
+              "icon": "terminal-bash"
+            },
+          }, 
+          "terminal.integrated.defaultProfile.windows": "Git Bash"
     },
     "extensions": [
         "esbenp.prettier-vscode",
-		"ms-vscode.cpptools",
-		"ms-vscode.cmake-tools"
+        "ms-vscode.cpptools-extension-pack"
     ]
 }
