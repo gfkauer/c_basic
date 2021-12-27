@@ -11,7 +11,7 @@
                 "-g",
                 "-o",
                 "helloworld",
-                "helloworld.c"
+                "section_03/helloworld.c"
             ],
             "group": {
                 "kind": "build",
