@@ -10,7 +10,7 @@
             "args": [
                 "-g",
                 "-o",
-                "helloworld",
+                "bin/helloworld",
                 "section_03/helloworld.c"
             ],
             "group": {
